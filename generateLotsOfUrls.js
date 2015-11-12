@@ -53,20 +53,20 @@ function buildGetUrls($url, $getdata, $fromDate, $toDate) {
     $getdata["SDP0"] = originalSDP0; //fuuuuu
     return $ret;
 };
-var $url = "http://www.momondo.no/multicity/";
-//"http://www.momondo.no/multicity/?Search=true&TripType=oneway&SegNo=1&SO0=SGN&SD0=OSL&SDP0=10-09-2014&AD=1&TK=ECO&DO=false&NA=true#Search=true&TripType=oneway&SegNo=1&SO0=SGN&SD0=OSL&SDP0=10-09-2014&AD=1&TK=ECO&DO=false&NA=true";
+var $url = "http://www.momondo.no/flightsearch/";
+//"http://www.momondo.no/flightsearch/?Search=true&TripType=1&SegNo=1&SO0=SGN&SD0=OSL&SDP0=10-09-2014&AD=1&TK=ECO&DO=false&NA=true#Search=true&TripType=1&SegNo=1&SO0=SGN&SD0=OSL&SDP0=10-09-2014&AD=1&TK=ECO&DO=false&NA=true";
 var $getdata = {};
 $getdata["Search"] = "true";
-$getdata["TripType"] = "oneway";
+$getdata["TripType"] = "1";
 $getdata["SegNo"] = "1"; //?? 
 $getdata["SO0"] = "SGN"; //<TRAVEL FROM CODE
 $getdata["SD0"] = "OSL"; //<TRAVEL TO, CODE
-$getdata["SDP0"] = "10-09-2014"; //<TRAVEL FROM DATE
+$getdata["SDP0"] = "11-11-1111"; //<TRAVEL FROM DATE
 $getdata["AD"] = "1"; //<??? 
 $getdata["TK"] = "ECO"; //<??? (probably "ECO"=economy / business / firstclass, etc, but not confirmed...);
 $getdata["DO"] = "false"; //<???
 $getdata["NA"] = "true"; //<???
-var urls = buildGetUrls($url, $getdata, (new Date("2014-09-03")), (new Date("2014-09-16")));
+var urls = buildGetUrls($url, $getdata, (new Date("2015-11-12")), (new Date("2015-12-5")));
 document.body.innerHTML = "";
 var i = 0,
     tmpe;
