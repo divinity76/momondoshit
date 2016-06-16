@@ -66,15 +66,23 @@ $getdata["AD"] = "1"; //<???
 $getdata["TK"] = "ECO"; //<??? (probably "ECO"=economy / business / firstclass, etc, but not confirmed...);
 $getdata["DO"] = "false"; //<???
 $getdata["NA"] = "true"; //<???
-var urls = buildGetUrls($url, $getdata, (new Date("2015-11-12")), (new Date("2015-12-5")));
+var urls = buildGetUrls($url, $getdata, (new Date("2016-06-17")), (new Date("2016-12-5")));
 document.body.innerHTML = "";
 var i = 0,
     tmpe;
+	var onclickfun=function(ev){
+	ev.target.parentNode.removeChild(ev.target.nextSibling);
+	ev.target.parentNode.removeChild(ev.target.nextSibling);
+	ev.target.parentNode.removeChild(ev.target.nextSibling);
+	ev.target.parentNode.removeChild(ev.target);
+	
+	};
 for (i = 0; i < urls.length; ++i) {
     tmpe = document.createElement("a");
     tmpe.setAttribute("href", tmpe.href = urls[i]);
     tmpe.setAttribute("target", tmpe.target = "_blank");
     tmpe.textContent = tmpe.href;
+	tmpe.addEventListener("click",onclickfun);
     document.body.appendChild(tmpe);
     document.body.appendChild(document.createElement("br"));
     document.body.appendChild(document.createElement("br"));
