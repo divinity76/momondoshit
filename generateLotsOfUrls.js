@@ -36,7 +36,7 @@ if(auto_click) {
         if(ele) {
             console.log("clicking", ele.href);
             ele.click();
-            setTimeout(autoclicker, 10*1000);
+            setTimeout(autoclicker, 30*1000);
         } else {
         }
     }
