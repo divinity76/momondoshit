@@ -28,7 +28,7 @@ function generateUrls(from, to, startDate, endDate, requireCheckinLuggage) {
         startDate.setDate(startDate.getDate() + 1);
     }
 }
-generateUrls("OSL", "SGN", moment().add(1, "days").toDate(), moment().add(2, "months").toDate(), requireCheckinLuggage = true);
+generateUrls("SGN", "OSL", moment().add(1, "days").toDate(), moment().add(2, "months").toDate(), requireCheckinLuggage = true);
 auto_click = 1;
 if(auto_click) {
     function autoclicker(){
